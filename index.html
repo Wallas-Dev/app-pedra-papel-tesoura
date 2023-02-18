@@ -1,0 +1,180 @@
+<html>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .title {
+
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 30px;
+
+        }
+
+        .title span {
+            border-radius: 30px;
+            padding: 20px 20px;
+            background-color: blueviolet;
+            color: white;
+        }
+
+        .player-options img,
+        .enemy-options img {
+            max-width: 150px;
+            opacity: 0.3;
+            cursor: pointer;
+        }
+
+        .align {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .enemy-options {
+            flex: 1;
+            text-align: right;
+        }
+
+        .placar {
+            width: 100%;
+            padding: 10px;
+            display: flex;
+            font-family: Arial, Helvetica, sans-serif;
+            flex-flow: row wrap;
+
+        }
+
+        .w33 {
+            width: 33.3%;
+        }
+
+        .robo {
+            display: flex;
+            justify-content: end;
+            margin-top: 5px;
+        }
+
+        .winner {
+            display: flex;
+            color: rgb(255, 255, 255);
+            justify-content: center;
+
+        }
+
+        .alinhar {
+            padding: 10px 5px;
+            border-radius: 30px;
+            background-color: rgb(50, 188, 73);
+            display: flex;
+            border: 2px solid black;
+
+        }
+
+        .alinhar h3 {
+            padding-left: 4px;
+            padding-right: 4px;
+
+        }
+
+        .player {
+            display: flex;
+            margin-top: 5px;
+
+        }
+
+        .player .bullet {
+            margin-left: 10px;
+            width: 20px;
+            height: 20px;
+            background-color: #ccc;
+            border-radius: 20px;
+        }
+
+        .robo .bullet {
+            margin-left: 10px;
+            width: 20px;
+            height: 20px;
+            background-color: #ccc;
+            border-radius: 20px;
+        }
+
+        .w33 .btn-reset {
+            margin-top: 5px;
+            margin-left: 5px;
+            padding: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            width: 80px;
+            background-color: rgb(107, 0, 247);
+            border-radius: 25px;
+            color: white;
+            cursor: pointer;
+            transition: 0.5s;
+
+        }
+        .w33 .btn-reset:hover {
+            transition: 0.5s;
+            background-color: rgb(152, 107, 210);
+        }
+
+        .btn-reset{
+            display: 0;
+        }
+        @media screen and (max-width: 900px) {
+            .winner {
+                display: block;
+                text-align: center;
+            }
+
+            .alinhar {
+                display: block;
+            }
+        }
+    </style>
+    <h1 class="title"><span>Pedra, Papel ou Tesoura!</span></h1>
+    <hr>
+    <div class="placar">
+        <div class="w33">
+            <div class="player">
+                <h3>Player:</h3>
+                <div class="bullet"></div>
+                <div class="bullet"></div>
+            </div>
+        </div>
+        <div class="w33">
+            <div class="winner">
+                
+            </div>
+        </div>
+        <div class="w33">
+            <div class="robo">
+                <h3>Robô:</h3>
+                <div class="bullet"></div>
+                <div class="bullet"></div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="align">
+        <div class="player-options">
+            <div><img opt="papel" src="./images/paper.png" alt=""></div>
+            <div><img opt="pedra" src="./images/rock.png" alt=""></div>
+            <div><img opt="tesoura" src="./images/scisor.png" alt=""></div>
+        </div>
+        <div class="enemy-options">
+            <div><img optIni="papel" src="./images/paper.png" alt=""></div>
+            <div><img optIni="pedra" src="./images/rock.png" alt=""></div>
+            <div><img optIni="tesoura" src="./images/scisor.png" alt=""></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
